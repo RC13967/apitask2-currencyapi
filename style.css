@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Noto+Sans+JP:wght@700&display=swap');
+body{
+  background-color: rgb(139, 139, 139);
+  font-family: 'Noto Sans JP', sans-serif;
+  
+}
+.header-inline {
+  display: inline-block;
+}
+.header{
+  top:10px;
+  color: rgb(57, 12, 116);
+}
+.description{
+  color: rgb(0, 78, 97);
+  font-size: 15px;
+}
+button{
+  background-color: rgb(122, 75, 101);
+  color:rgb(241, 228, 213);
+  border-radius: 8px;
+  height: 33px;
+  padding: 5px;
+  
+}
+
+.from-currency-code{
+  background-color: rgb(209, 196, 200);
+  color:rgb(80, 110, 23);
+  border-radius: 8px;
+  height: 25px;
+  padding: 2px 25px 2px 5px;
+}
+.load-codes {
+    background-color:rgb(153, 201, 202);  
+    border-radius: 10px;   
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+.each-code {
+  margin-top: 10px;
+  margin-left: 10px;
+  display: grid;
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  border-radius: 5px;
+}
+
+.currency-value{
+    font-size: 20px;
+    color: rgb(0, 145, 48);
+    font-weight: bolder;
+    padding: 0px 10px;
+}
+
+.currency{
+    font-size: 20px;
+    color: rgb(145, 41, 0);
+    font-weight: bolder;
+}
+.currency-code{
+    font-size: 20px;
+    color: rgb(145, 0, 145);
+    font-weight: bolder;
+    padding-right: 10px;
+}
+
+
+
