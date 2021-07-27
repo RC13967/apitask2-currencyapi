@@ -18,7 +18,8 @@
       async function getcurrencyvalues() {
           
           
-        const code1 = document.querySelector(".from-currency-code").value;
+        let code1 = document.querySelector(".from-currency-code").value;
+        code1 = code1.toLowerCase();
         if(code1!=""){
             const data = await fetch(
                 `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${code1}.json`,
@@ -27,6 +28,7 @@
                 }
               );
               
+              try{
                 let currencyvaluesjson = await data.json();
                 currencyvaluesjson = currencyvaluesjson[code1];
                 let currencyvaluesarray = [];
@@ -35,6 +37,13 @@
       
                 }
                 localStorage.setItem("currencyvaluesstring",JSON.stringify(currencyvaluesarray));
+
+              }
+              catch {
+                alert("Enter a valid code. Codes for currencies are given below");
+              }
+
+                
         }
         getcurrencycodes();
       
@@ -49,9 +58,15 @@
           method: "GET"
         }
       );
+
       
-        const currencyjson = await data.json();
+        try{
+          const currencyjson = await data.json();
       loadcurrencyvalues(currencyjson);
+        }
+        catch{
+          alert("check internet connection");
+        }
      
     }  
     function loadcurrencyvalues(currencyjson) {
