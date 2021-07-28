@@ -66,5 +66,7 @@ button{
     padding-right: 10px;
 }
 
-
+.heading {
+  font-weight: bolder;
+}
 
