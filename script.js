@@ -8,6 +8,7 @@
              Convert <input class='from-currency-code' placeholder='Enter currency code eg."inr"'/>
              <button class="search-currencys" onclick="refreshpage() , getcurrencyvalues()"> Search </button>
              <button class="sort-currencys" onclick="sortcurrencys()"> Sort by higher value </button></div>
+             <button class = "clearall" onclick = "clearall()">Refresh</button>
                 `;
                 document.body.append(searchcontainer);
                 getcurrencyvalues();  //calls currency values        
@@ -67,7 +68,7 @@
        loadcodes.className = "load-codes"; 
       if(currencyvalues != null){
         //heading for currency values list
-        loadcodes.innerHTML =`<button class = "clearall" onclick = "clearall()">Refresh</button>
+        loadcodes.innerHTML =`
         <div class = "each-code">
         <div class = "currency-code heading">CODE</div>
         : <div class = "currency-value heading">VALUE</div>
